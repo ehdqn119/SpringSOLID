@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+<mapper namespace="com.yhdatabase.bizportal.mapper.CodeGroupMapper">
+ 
+    <select id="select"  resultType="code_group">
+        SELECT * FROM code_group order by b_system, group_name
+    </select>
+    
+    <insert id="insert" parameterType="code_group" >
+    	INSERT INTO code_group (group_code, group_name, group_memo, b_system)
+    		VALUES ( #{group_code}, #{group_name}, #{b_system} )
+    </insert>
+    
+    
+</mapper>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+  xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
+  layout:decorator="layout/defaultLayout">
+<head>
+<title>Thymeleaf 예제</title>
+</head>
+<body>
+<th:block layout:fragment="content">
+<span th:text="${test_val}"></span><br/>
+<span th:text="${com_info.name_kr}"></span><br/>
+</th:block>
+
+</body>
+</html>

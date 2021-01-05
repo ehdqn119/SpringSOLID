@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+  xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
+  layout:decorator="layout/mainLayout">
+<head>
+<title>구직자 등록</title>
+</head>
+<body>
+<th:block layout:fragment="content">
+			<div class="card card-primary">
+              <div class="card-header">
+                <h3 class="card-title">Quick Example</h3>
+              </div>
+              <!-- /.card-header -->
+              <!-- form start -->
+              <form role="form">
+                <div class="card-body">
+
+				 <div class="form-group row">
+                    <label for="resume_title" class="col-sm-2 col-form-label">이력서 제목</label>
+                    <div class="col-sm-10">
+                    	<input type="text" class="form-control" id="resume_title" name="resume_title" placeholder="" >
+                    </div>
+                  </div>                  
+				  <div class="form-group row">
+                    <label for="form-check-label" class="col-sm-2 col-form-label">관연락처만 사용</label>
+                    <div class="col-sm-10">
+				    	<input class="form-check-input" type="checkbox" id="b_use_org_contact" name="b_use_org_contact" checked >
+				    	(체크 해제시 개인연락처 표시)
+                    </div>
+                  </div>                  
+				  <div class="form-group row">
+                    <label for="contact_email" class="col-sm-2 col-form-label">Email</label>
+                    <div class="col-sm-10">
+                    	<input type="email" class="form-control" id="contact_email" name="contact_email" placeholder="" >
+                    </div>
+                  </div>                  
+				  <div class="form-group row">
+                    <label for="contact_mobile" class="col-sm-2 col-form-label">휴대폰 번호</label>
+                    <div class="col-sm-10">
+                    	<input type="text" class="form-control" id="contact_mobile" name="contact_mobile" placeholder="" >
+                    </div>
+                  </div>                  
+				  <div class="form-group row">
+                    <label for="contact_phone" class="col-sm-2 col-form-label">일반전화</label>
+                    <div class="col-sm-10">
+                    	<input type="text" class="form-control" id="contact_phone" name="contact_phone" placeholder="" >
+                    </div>
+                  </div>		
+
+
+				  <div class="form-group row">
+                    <label for="school_career_code" class="col-sm-2 col-form-label">최종학력</label>
+                    <div class="col-sm-10">
+						<select class="form-control" name="school_career_code">
+						  <option>option 1</option>
+						  <option>option 2</option>
+						  <option>option 3</option>
+						  <option>option 4</option>
+						  <option>option 5</option>
+						</select>                    
+					</div>
+                  </div>	
+				  
+				  
+				  
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <!-- text input -->
+                      <div class="form-group">
+                        <label>희망연봉(최소,만원단위)</label>
+                        <input type="text" class="form-control" id="want_pay_start" name="want_pay_start" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>만원
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label>희망연봉(최대,만원단위)</label>
+                        <input type="text" class="form-control" id="want_pay_end" name="want_pay_end" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>만원
+                      </div>
+                    </div>
+                  </div>				  
+				  
+				  <div class="form-group row">
+                    <label for="career_ict_term_month" class="col-sm-2 col-form-label">ICT 관련 경력(개월)</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="career_ict_term_month" name="career_ict_term_month" placeholder="">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="last_pay" class="col-sm-2 col-form-label">최종 급여(만원)</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="last_pay" name="last_pay" placeholder="">
+                    </div>
+                  </div>
+				  
+				  
+				  
+				  
+				  
+                  <div class="row">
+                    <div class="col-sm-6">
+						<div class="form-group row">
+							<label for="want_region1_code" class="col-sm-2 col-form-label">희망근무지역1</label>
+							<div class="col-sm-10">
+								<select class="form-control" name="want_region1_code" id="want_region1_code" >
+								  <option>option 1</option>
+								  <option>option 2</option>
+								  <option>option 3</option>
+								  <option>option 4</option>
+								  <option>option 5</option>
+								</select>                    
+							</div>
+						</div>	
+                    </div>
+                    <div class="col-sm-6">
+                      	<div class="form-group row">
+							<label for="want_region2_code" class="col-sm-2 col-form-label">희망근무지역2</label>
+							<div class="col-sm-10">
+								<select class="form-control" name="want_region2_code" id="want_region2_code" >
+								  <option>option 1</option>
+								  <option>option 2</option>
+								  <option>option 3</option>
+								  <option>option 4</option>
+								  <option>option 5</option>
+								</select>                    
+							</div>
+						</div>	
+                    </div>
+                  </div>	
+				  <div class="form-group row">
+                    <label for="want_job_type_code" class="col-sm-2 col-form-label">희망근무형태</label>
+                    <div class="col-sm-10">
+						<select class="form-control" name="want_job_type_code" id="want_job_type_code">
+						  <option>option 1</option>
+						  <option>option 2</option>
+						  <option>option 3</option>
+						  <option>option 4</option>
+						  <option>option 5</option>
+						</select>                    
+					</div>
+                  </div>	
+				  <div class="form-group row">
+                    <label for="intro_text" class="col-sm-2 col-form-label">자기소개</label>
+                    <div class="col-sm-10">
+						<textarea class="form-control" rows="3" name="intro_text" id="intro_text" placeholder="Enter ..."></textarea>
+                    </div>
+                  </div>
+				  
+				  
+				  <div class="form-group row">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+                    <div class="col-sm-10">
+                      <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                    </div>
+                  </div>
+				  
+				  <div class="form-group">
+                    <label for=""></label>
+                    <input type="" class="form-control" id="" name="" placeholder="" >
+                  </div>				
+				  <div class="form-group">
+                    <label for=""></label>
+                    <input type="" class="form-control" id="" name="" placeholder="" >
+                  </div>				
+				  <div class="form-group">
+                    <label for=""></label>
+                    <input type="" class="form-control" id="" name="" placeholder="" >
+                  </div>				
+				  <div class="form-group">
+                    <label for=""></label>
+                    <input type="" class="form-control" id="" name="" placeholder="" >
+                  </div>				
+
+
+				  
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputFile">File input</label>
+                    <div class="input-group">
+                      <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="exampleInputFile">
+                        <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                      </div>
+                      <div class="input-group-append">
+                        <span class="input-group-text" id="">Upload</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                  </div>
+                </div>
+                <!-- /.card-body -->
+
+                <div class="card-footer">
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+              </form>
+            </div>
+            <!-- /.card -->
+            
+</th:block>
+
+</body>
+</html>

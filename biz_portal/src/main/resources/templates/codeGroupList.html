@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+  xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
+  layout:decorator="layout/mainLayout">
+<head>
+<title>그룹 코드 관리</title>
+<script type="text/javascript">
+
+</script>
+</head>
+<body>
+<th:block layout:fragment="content">
+			<div class="card card-primary">
+              <div class="card-header">
+                <h3 class="card-title">그룹 코드 등록/수정</h3>
+              </div>
+              <!-- /.card-header -->
+              <!-- form start -->
+              <form role="form">
+                <div class="card-body">
+
+					<div class="row">
+					  <div class="col-2">
+	                    <input type="text" class="form-control" id="group_name" name="group_name" placeholder="그룹코드명">
+	                  </div>					
+	                  <div class="col-2">
+	                    <input type="text" class="form-control" id="group_code" name="group_code" placeholder="그룹코드 값">
+	                  </div>
+	                  <div class="col-3">
+	                    <input type="text" class="form-control" id="group_memo" name="group_memo" placeholder="설명">
+	                  </div>
+	                  <div class="col-4">
+	                    <div class="form-check">
+                          <input class="form-check-input" id="b_system" name="b_system" type="checkbox">
+                          <label class="form-check-label">시스템 코드여부(체크시 삭제안됨)</label>
+                        </div>
+	                  </div>
+	                </div>
+				
+                </div>
+                <!-- /.card-body -->
+
+                <div class="card-footer">
+                  <button type="submit" class="btn btn-primary" id="btn_add">추가</button>
+                  <button type="submit" class="btn btn-primary" id="btn_modify">변경</button>
+                </div>
+              </form>
+            </div>
+            <!-- /.card -->
+            
+
+		<!-- /.row -->
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">목록</h3>
+
+                <div class="card-tools">
+                  <div class="input-group input-group-sm" style="width: 150px;">
+                    <input type="text" name="table_search" class="form-control float-right" placeholder="검색">
+
+                    <div class="input-group-append">
+                      <button type="submit" class="btn btn-default"><i class="fas fa-search"></i></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body table-responsive p-0">
+                <table class="table table-hover text-nowrap">
+                  <thead>
+                    <tr>
+                      <th>그룹코드명</th>
+                      <th>그룹코드값</th>
+                      <th>설명</th>
+                      <th>시스템</th>
+                      <th>수정/삭제</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>183</td>
+                      <td>John Doe</td>
+                      <td>11-7-2014</td>
+                      <td><span class="tag tag-success">Approved</span></td>
+                      <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
+                    </tr>
+                    <tr>
+                      <td>219</td>
+                      <td>Alexander Pierce</td>
+                      <td>11-7-2014</td>
+                      <td><span class="tag tag-warning">Pending</span></td>
+                      <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
+                    </tr>
+                    <tr>
+                      <td>657</td>
+                      <td>Bob Doe</td>
+                      <td>11-7-2014</td>
+                      <td><span class="tag tag-primary">Approved</span></td>
+                      <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
+                    </tr>
+                    <tr>
+                      <td>175</td>
+                      <td>Mike Doe</td>
+                      <td>11-7-2014</td>
+                      <td><span class="tag tag-danger">Denied</span></td>
+                      <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+          </div>
+        </div>
+        <!-- /.row -->
+
+            
+            
+</th:block>
+
+</body>
+</html>
